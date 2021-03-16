@@ -3,7 +3,7 @@ function verificar() {
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
     var res = document.querySelector('div#res')
-    if (fano.value.length == 0 || Number(fano.value) > ano) {
+    if (fano.value == length || Number(fano.value) > ano) {
         window.alert('[ERRO] Verificar os dados e tente novamente!')
     } else {
         var fsex = document.getElementsByName('radsex')
@@ -12,36 +12,36 @@ function verificar() {
         var gênero = ''
         var img = document.createElement('img')
         img.setAttribute('id','foto')
-        if(fsex[0].checked) {
+        if (fsex[1].checked) {
             gênero = 'Homem'
-            if (idade >=0 && idade <10) {
+            if (idade >=0 && idade < 10) {
                 //Criança
-                img.setAttribute('src','foto-bebe-m.png')
+                img.setAttribute('src', 'foto-bebe-m.png')
         } else if (idade < 21) {
             //Jovem
-            img.setAttribute('src','foto-jovem-m.png')
+            img.setAttribute('src', 'foto-jovem-m.png')
         } else if (idade < 50) {
              //Adulto
-            img.setAttribute('src','foto-adulto-m.png')
+            img.setAttribute('src', 'foto-adulto-m.png')
         } else {
             //Idoso
-            img.setAttribute('src','foto-idoso-m.png')
+            img.setAttribute('src', 'foto-idoso-m.png')
         }
         
-    } else if (fsex[1].checked) {
+    } else if (fsex[2].checked) {
             gênero = 'Mulher'
-            if (idade >=0 && idade <10) {
+            if (idade >=0 && idade <10 ) {
                 //Criança
-                img.setAttribute('src','foto-bebe-f.png')
+                img.setAttribute('src', 'foto-bebe-f.png')
         } else if (idade < 21) {
             //Jovem
-            img.setAttribute('src','foto-jovem-f.png')
+            img.setAttribute('src', 'foto-jovem-f.png')
         } else if (idade < 50) {
              //Adulto
-            img.setAttribute('src','foto-adulto-f.png')
+            img.setAttribute('src', 'foto-adulto-f.png')
         } else {
             //Idoso
-            img.setAttribute('src','foto-idoso-f.png')
+            img.setAttribute('src', 'foto-idoso-f.png')
         }
     }
         res.style.texAlign = 'center'
@@ -49,5 +49,5 @@ function verificar() {
         res.appendChild(img)
     }
     
-    }
+}
     
