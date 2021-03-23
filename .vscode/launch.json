@@ -1,8 +1,6 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
-        
         {
             "type": "pwa-node",
             "request": "launch",
@@ -17,6 +15,12 @@
             "name": "Run Current File",
             "request": "launch",
             "program": "${workspaceFolder}\\Aula14\\ambiente.js"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Create JavaScript Debug Terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
